@@ -13,7 +13,8 @@ alert("El resultado de la operacion es: " + operacion)
 var entero = 44;
 var cadena = "Hola 'que' tal";
 var booleano = false;
-
 var numeroTexto = "33";
 
-console.log(String(numeroTexto) + 7);
+console.log(typeof entero);
+console.log(typeof cadena);
+console.log(typeof booleano);
