@@ -1,5 +1,6 @@
-//Variables 
+'use strict'
 
+//Variables 
 
 var pais = "España";
 var continente = "Europa";
