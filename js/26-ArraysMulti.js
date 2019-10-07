@@ -2,6 +2,10 @@
 
 var categorias = ['Accion', 'Terror', 'Comedia'];
 var peliculas = ['La verdad duele', 'La vida es bella', 'Gran torino'];
+var lenguajes = ['C', 'C++', 'GO', 'PHP'];
+
+peliculas.reverse();
+console.log(peliculas);
 
 var cine = [categorias, peliculas];
 
@@ -23,4 +27,16 @@ if (index > -1) {
 }
 
 var peliculasStr = peliculas.join();
-console.log(peliculasStr);
+var cadena = "texto1, texto2, texto3";
+var cadenaArray = cadena.split(", ");
+console.log(cadenaArray);
+/*
+for (let lenguaje in lenguajes) {
+   console.log(lenguajes[lenguaje]);
+}*/
+
+var precios = [10, 20, 50, 80, 12];
+//var busqueda = lenguajes.findIndex(lenguaje => lenguaje == "PHP");
+var busqueda = precios.some(precio => precio < 10);
+
+console.log(busqueda);
