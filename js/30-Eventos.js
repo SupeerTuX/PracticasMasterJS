@@ -33,3 +33,35 @@ boton.addEventListener('mouseover', function () {
 boton.addEventListener('mouseout', function () {
     boton.style.background = "#ccc";
 });
+
+
+//Focus
+var input = document.querySelector("#campoNombre");
+input.addEventListener('focus', function () {
+    boton.style.background = "#ccc";
+    console.log("[Focus]Foco en el input");
+});
+
+//Blur
+input.addEventListener('blur', function () {
+    boton.style.background = "#ccc";
+    console.log("[Blur]Fuera del input");
+});
+
+//keydown
+input.addEventListener('keydown', function (event) {
+    boton.style.background = "#ccc";
+    console.log("[Keydown]Pulsando la tecla", String.fromCharCode(event.keyCode));
+});
+
+//Keypress
+input.addEventListener('keypress', function (event) {
+    boton.style.background = "#ccc";
+    console.log("[Keypress]Tecla presionada", String.fromCharCode(event.keyCode));
+});
+
+//Keyup
+input.addEventListener('keyup', function (event) {
+    boton.style.background = "#ccc";
+    console.log("[Keyup]Tecla soltada", String.fromCharCode(event.keyCode));
+});
