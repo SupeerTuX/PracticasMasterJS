@@ -48,6 +48,3 @@ for (let div in divsRojos) {
     }
 }
 
-//Query selector
-var id = document.querySelector(".rojo");
-console.log(id);
