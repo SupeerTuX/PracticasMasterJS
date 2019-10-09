@@ -14,4 +14,25 @@ caja.style.background = "red";
 caja.style.padding = "20px";
 caja.style.color = 'white';
 
-console.log(caja);
+
+//conseguir elemento por su etiqueta 
+
+var todosLosDiv = document.getElementsByTagName('div');
+var seccion = document.querySelector("#miSection");
+var hr = document.createElement("hr");
+
+console.log(todosLosDiv);
+
+
+for (var valor in todosLosDiv) {
+    if (typeof todosLosDiv[valor].textContent == "string") {
+        var parrafo = document.createElement("p");
+        var texto = document.createTextNode(todosLosDiv[valor].textContent);
+        parrafo.append(texto);
+        seccion.append(parrafo);
+    }
+}
+
+seccion.append(hr);
+
+//conseguir elementos por su clase
