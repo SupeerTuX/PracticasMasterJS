@@ -36,3 +36,18 @@ for (var valor in todosLosDiv) {
 seccion.append(hr);
 
 //conseguir elementos por su clase
+var divsRojos = document.getElementsByClassName('rojo');
+var divsAmarillo = document.getElementsByClassName('amarillo');
+
+divsAmarillo[0].style.background = "yellow";
+
+
+for (let div in divsRojos) {
+    if (divsRojos[div].className == "rojo") {
+        divsRojos[div].style.background = "red";
+    }
+}
+
+//Query selector
+var id = document.querySelector(".rojo");
+console.log(id);
