@@ -4,17 +4,24 @@
 
 var div_usuarios = document.querySelector('#usuarios');
 var div_user = document.querySelector('#user');
+var div_profesor = document.querySelector('#profesor');
 getUsers()
     .then(data => data.json())
     .then(users => {
         listadoUsuarios(users.data);
 
+
+        return getInfo();
+    })
+    .then(data => {
+        div_profesor.innerHTML = data;
         return getUser();
     })
     .then(data => data.json())
     .then(user => {
         mostrarUser(user.data);
-    })
+
+    });
 
 
 
@@ -35,6 +42,31 @@ function listadoUsuarios(usuarios) {
 
         document.querySelector("#loading").style.display = 'none';
     });
+}
+
+function getInfo() {
+    var profesor = {
+        nombre: 'Victor',
+        apellidos: 'Robles',
+        url: 'https://ditg.mx'
+    };
+
+    return new Promise((resolve, reject) => {
+
+        var profesorString = "";
+
+        setTimeout(function () {
+            profesorString = JSON.stringify(profesor);
+            console.log(profesorString);
+            if (typeof profesorString != 'string' || profesorString == '') return reject('error1');
+
+            return resolve(profesorString);
+
+        }, 3000);
+
+
+    });
+
 }
 
 function mostrarUser(user) {
