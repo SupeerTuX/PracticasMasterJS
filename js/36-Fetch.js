@@ -9,8 +9,6 @@ getUsers()
     .then(data => data.json())
     .then(users => {
         listadoUsuarios(users.data);
-
-
         return getInfo();
     })
     .then(data => {
@@ -20,11 +18,10 @@ getUsers()
     .then(data => data.json())
     .then(user => {
         mostrarUser(user.data);
-
+    })
+    .catch(error => {
+        alert("Error en las peticiones");
     });
-
-
-
 
 function getUsers() {
     return fetch('https://reqres.in/api/users');
