@@ -16,3 +16,4 @@ La hora es ${hora}
 `;
 
 console.log(textoHora);
+console.log(Math.random());
