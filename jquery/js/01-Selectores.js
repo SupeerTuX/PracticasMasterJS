@@ -9,4 +9,14 @@ $(document).ready(function () {
 
     $("#verde").css("background", "green")
         .css("color", "white");
+
+
+    //selector de clase
+    var miClase = $('.zebra');
+    miClase.css("padding", "5px");
+
+    $('.sinBorde').click(function () {
+        console.log('Clicl');
+        $(this).addClass('zebra');
+    });
 });
