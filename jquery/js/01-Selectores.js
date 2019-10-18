@@ -32,4 +32,9 @@ $(document).ready(function () {
         }
 
     });
+
+    //Selectores de atributo
+    $('[title="Google"]').css('background', '#ccc');
+    $('[title="FaceBook"]').css('background', 'blue');
+
 });
