@@ -19,4 +19,17 @@ $(document).ready(function () {
         console.log('Clicl');
         $(this).addClass('zebra');
     });
+
+    //Selectores de etiqueta
+    var parrafos = $("p").css("cursor", "pointer");
+
+    parrafos.click(function () {
+        var it = $(this);
+        if (!it.hasClass('grande')) {
+            it.addClass('grande');
+        } else {
+            it.removeClass('grande');
+        }
+
+    });
 });
