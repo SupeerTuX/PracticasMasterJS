@@ -37,4 +37,10 @@ $(document).ready(function () {
     $('[title="Google"]').css('background', '#ccc');
     $('[title="FaceBook"]').css('background', 'blue');
 
+    //Otros
+    //$('p, a').addClass('margenSuperior');
+
+    var busqueda = $('#caja').find('.resaltado');
+    console.log(busqueda);
+
 });
