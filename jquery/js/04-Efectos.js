@@ -1,21 +1,24 @@
 $(document).ready(function () {
 
     caja = $('#caja');
-    /*
-       $('#mostrar').hide();
-   
-       $('#mostrar').click(function () {
-           $(this).hide();
-           $('#ocultar').show();
-           $('#caja').fadeIn('slow');
-       });
-   
-       $('#ocultar').click(function () {
-           $(this).hide();
-           $('#mostrar').show();
-           $('#caja').fadeOut('slow');
-       });
-   */
+
+    $('#mostrar').hide();
+
+    $('#mostrar').click(function () {
+        $(this).hide();
+        $('#ocultar').show();
+        caja.fadeIn('slow');
+    });
+
+    $('#ocultar').click(function () {
+        $(this).hide();
+        $('#mostrar').show();
+        caja.fadeOut('slow', function () {
+            console.log('Cartel Oculto');
+        });
+
+    });
+
     $('#toggle').click(function () {
         caja.slideToggle('fast');
     });
