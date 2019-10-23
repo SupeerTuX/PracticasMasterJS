@@ -5,4 +5,9 @@ $(document).ready(function () {
 
     //redimencionar
     $('.elemento').resizable();
+
+    //Seleccionar elementos
+    $('.listaSeleccion').selectable();
+
+
 });
