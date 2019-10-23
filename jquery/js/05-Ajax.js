@@ -10,5 +10,24 @@ $(document).ready(function () {
         });
     });
 
+    //Metodo post
+
+
+    $('#formulario').submit(function (e) {
+        e.preventDefault();
+        var usuario = {
+            name: $('input[name="name"]').val(),
+            web: $('input[name="web"]').val()
+        };
+        console.log(usuario);
+
+        $.post($(this).attr("action"), usuario, function (response) {
+            console.log(response);
+        }).done(function () {
+            alert('Usuario añadido correctamente');
+        });
+        return false;
+    });
+
 
 });
