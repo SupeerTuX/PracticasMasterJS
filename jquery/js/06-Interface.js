@@ -16,5 +16,12 @@ $(document).ready(function () {
         }
     });
 
+    //Drop
+    $("#elementoMovido").draggable();
+    $("#area").droppable({
+        drop: function () {
+            console.log('Has soltado algo dentro del area');
+        }
+    });
 
 });
