@@ -53,12 +53,27 @@
             height: 300px;
             border: 4px solid green;
         }
+
+        .elemento {
+            background: pink;
+            float: none;
+            display: none;
+        }
     </style>
 
 </head>
 
 <body>
     <h1>jQuery UI</h1>
+    <hr>
+    <h3>ToolTip</h3>
+    <a href="#" id="misDatos" title="Acceder a la seccion de mis datos de esta web">Mis datos</a>
+    <a href="#" id="misDatos" title="Logeate en esta web">Identificarse</a>
+    <a href="#" id="misDatos" title="Ver todos mis amigos">Amigos</a>
+    <hr>
+
+    <button id="mostrar">Mostrar</button>
+    <div class="caja elemento"></div>
 
     <div id="elementoMovido"></div>
     <br>

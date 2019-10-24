@@ -24,4 +24,12 @@ $(document).ready(function () {
         }
     });
 
+    //Efectos
+    $('#mostrar').click(function () {
+        $('.caja').toggle('shake', 'slow');
+    })
+
+    //tooltip
+    $(document).tooltip();
+
 });
