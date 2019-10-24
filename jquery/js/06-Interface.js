@@ -37,5 +37,7 @@ $(document).ready(function () {
         $('#popup').dialog();
     });
 
+    //Datepicker
+    $('#calendario').datepicker();
 
 });
