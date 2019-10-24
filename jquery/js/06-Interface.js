@@ -32,4 +32,10 @@ $(document).ready(function () {
     //tooltip
     $(document).tooltip();
 
+    //Cuadro de dialogo
+    $('#lanzar').click(function () {
+        $('#popup').dialog();
+    });
+
+
 });
