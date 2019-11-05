@@ -56,4 +56,18 @@ $(document).ready(function () {
         $("#posts").append(post);
 
     });
+
+    //Selector de tema
+    var theme = $("#theme");
+    $('#toGreen').click(function () {
+        theme.attr("href", "css/green.css");
+    });
+
+    $('#toRed').click(function () {
+        theme.attr("href", "css/red.css");
+    });
+
+    $('#toBlue').click(function () {
+        theme.attr("href", "css/blue.css");
+    });
 });
