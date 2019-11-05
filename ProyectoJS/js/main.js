@@ -80,4 +80,26 @@ $(document).ready(function () {
 
         return false;
     });
+
+    //Login falso
+
+    $('#login form').submit(function () {
+        var formName = $("#formName").val();
+        console.log(formName);
+        localStorage.setItem("form_name", formName);
+    });
+
+    var formName = localStorage.getItem("form_name");
+    if (formName != null) {
+        var aboutParrafo = $("#about p");
+        aboutParrafo.html("<br><hr><strong>Bienvenido, " + formName + "</strong>");
+        aboutParrafo.append("<a href='#' id='logout'>Cerrar sesion</a>");
+        $("#login").hide();
+
+        $("#logout").click(function () {
+            localStorage.clear();
+            location.reload();
+        });
+    }
+
 });
