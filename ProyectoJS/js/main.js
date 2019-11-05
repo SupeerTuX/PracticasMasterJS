@@ -70,4 +70,14 @@ $(document).ready(function () {
     $('#toBlue').click(function () {
         theme.attr("href", "css/blue.css");
     });
+
+    //Scroll Arriba
+    $('.subir').click(function (e) {
+        e.preventDefault();
+        $('html, body').animate({
+            scrollTop: 0
+        }, 500);
+
+        return false;
+    });
 });
