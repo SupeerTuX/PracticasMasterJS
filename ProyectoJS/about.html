@@ -14,14 +14,10 @@
     <!-- jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 
-    <!-- CDN Slider -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
-    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
-
-    <!-- CDN MomentJS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/locale/es.js"></script>
-
+    <link rel="stylesheet" href="js/jquery-ui/jquery-ui.min.css">
+    <link rel="stylesheet" href="js/jquery-ui/jquery-ui.structure.min.css">
+    <link rel="stylesheet" href="js/jquery-ui/jquery-ui.theme.min.css">
+    <script type="text/javascript" src="js/jquery-ui/jquery-ui.min.js"></script>
 
     <!-- Scripts -->
     <script src="/ProyectoJS/js/main.js"></script>
@@ -54,19 +50,32 @@
             </nav>
         </header>
 
-        <!-- Slider -->
-        <div id="slider">
-            <div class="bxslider">
-                <div><img src="img/hojas.jpg" title="Funky roots"></div>
-                <div><img src="img/rojo.jpg" title="The long and winding road"></div>
-                <div><img src="img/cielo.jpg" title="Happy trees"></div>
-            </div>
-        </div>
-
         <!-- Contenido -->
         <section id="content">
-            <div id="posts">
-                <!-- Carga desde JS -->
+            <div id="box">
+                <!-- Carga Acordeon -->
+                <h2>Sobre mi</h2>
+                <div id="acordeon">
+                    <h3>Quienes Somos?</h3>
+                    <div>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris maximus blandit metus.
+                        </p>
+                    </div>
+                    <h3>Nuestros Servicios</h3>
+                    <div>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris maximus blandit metus.
+                        </p>
+                    </div>
+                    <h3>Nuestros Clientes</h3>
+                    <div>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris maximus blandit metus.
+                        </p>
+                    </div>
+                </div>
+
             </div>
 
             <aside id="sidebar">

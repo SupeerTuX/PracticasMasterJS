@@ -1,50 +1,54 @@
 $(document).ready(function () {
 
     //Slider
-    $('.bxslider').bxSlider({
-        mode: 'fade',
-        captions: false,
-        slideWidth: 1200,
-        responsive: true
-    });
+    if (window.location.href.indexOf('index') > -1) {
+        $('.bxslider').bxSlider({
+            mode: 'fade',
+            captions: false,
+            slideWidth: 1200,
+            responsive: true
+        });
+    }
 
-    //Posts
-    var posts = [
-        {
-            title: 'Prieba de titulo1',
-            date: 'Publicado el dia ' + moment().date() + ' de ' + moment().format("MMMM") + ' del ' + moment().format("YYYY"),
-            content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris maximus blandit metus. Ut ante leo, tempor condimentum mollis ac, egestas non mauris. Aliquam erat volutpat. Duis fringilla tempus ligula id finibus. In cursus faucibus fringilla. Duis consectetur elit quis risus dignissim commodo. Nunc ut vestibulum quam. Proin turpis est, imperdiet vitae consectetur a, viverra in felis. Suspendisse elementum mattis faucibus. Aenean non egestas dolor, vel tincidunt nibh. Maecenas volutpat eget nisl sit amet ornare.'
+    if (window.location.href.indexOf('index') > -1) {
+        //Posts
+        var posts = [
+            {
+                title: 'Prieba de titulo1',
+                date: 'Publicado el dia ' + moment().date() + ' de ' + moment().format("MMMM") + ' del ' + moment().format("YYYY"),
+                content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris maximus blandit metus. Ut ante leo, tempor condimentum mollis ac, egestas non mauris. Aliquam erat volutpat. Duis fringilla tempus ligula id finibus. In cursus faucibus fringilla. Duis consectetur elit quis risus dignissim commodo. Nunc ut vestibulum quam. Proin turpis est, imperdiet vitae consectetur a, viverra in felis. Suspendisse elementum mattis faucibus. Aenean non egestas dolor, vel tincidunt nibh. Maecenas volutpat eget nisl sit amet ornare.'
 
-        },
-        {
-            title: 'Prieba de titulo2',
-            date: 'Publicado el dia ' + moment().date() + ' de ' + moment().format("MMMM") + ' del ' + moment().format("YYYY"),
-            content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris maximus blandit metus. Ut ante leo, tempor condimentum mollis ac, egestas non mauris. Aliquam erat volutpat. Duis fringilla tempus ligula id finibus. In cursus faucibus fringilla. Duis consectetur elit quis risus dignissim commodo. Nunc ut vestibulum quam. Proin turpis est, imperdiet vitae consectetur a, viverra in felis. Suspendisse elementum mattis faucibus. Aenean non egestas dolor, vel tincidunt nibh. Maecenas volutpat eget nisl sit amet ornare.'
+            },
+            {
+                title: 'Prieba de titulo2',
+                date: 'Publicado el dia ' + moment().date() + ' de ' + moment().format("MMMM") + ' del ' + moment().format("YYYY"),
+                content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris maximus blandit metus. Ut ante leo, tempor condimentum mollis ac, egestas non mauris. Aliquam erat volutpat. Duis fringilla tempus ligula id finibus. In cursus faucibus fringilla. Duis consectetur elit quis risus dignissim commodo. Nunc ut vestibulum quam. Proin turpis est, imperdiet vitae consectetur a, viverra in felis. Suspendisse elementum mattis faucibus. Aenean non egestas dolor, vel tincidunt nibh. Maecenas volutpat eget nisl sit amet ornare.'
 
-        },
-        {
-            title: 'Prieba de titulo3',
-            date: 'Publicado el dia ' + moment().date() + ' de ' + moment().format("MMMM") + ' del ' + moment().format("YYYY"),
-            content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris maximus blandit metus. Ut ante leo, tempor condimentum mollis ac, egestas non mauris. Aliquam erat volutpat. Duis fringilla tempus ligula id finibus. In cursus faucibus fringilla. Duis consectetur elit quis risus dignissim commodo. Nunc ut vestibulum quam. Proin turpis est, imperdiet vitae consectetur a, viverra in felis. Suspendisse elementum mattis faucibus. Aenean non egestas dolor, vel tincidunt nibh. Maecenas volutpat eget nisl sit amet ornare.'
+            },
+            {
+                title: 'Prieba de titulo3',
+                date: 'Publicado el dia ' + moment().date() + ' de ' + moment().format("MMMM") + ' del ' + moment().format("YYYY"),
+                content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris maximus blandit metus. Ut ante leo, tempor condimentum mollis ac, egestas non mauris. Aliquam erat volutpat. Duis fringilla tempus ligula id finibus. In cursus faucibus fringilla. Duis consectetur elit quis risus dignissim commodo. Nunc ut vestibulum quam. Proin turpis est, imperdiet vitae consectetur a, viverra in felis. Suspendisse elementum mattis faucibus. Aenean non egestas dolor, vel tincidunt nibh. Maecenas volutpat eget nisl sit amet ornare.'
 
-        },
-        {
-            title: 'Prieba de titulo4',
-            date: 'Publicado el dia ' + moment().date() + ' de ' + moment().format("MMMM") + ' del ' + moment().format("YYYY"),
-            content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris maximus blandit metus. Ut ante leo, tempor condimentum mollis ac, egestas non mauris. Aliquam erat volutpat. Duis fringilla tempus ligula id finibus. In cursus faucibus fringilla. Duis consectetur elit quis risus dignissim commodo. Nunc ut vestibulum quam. Proin turpis est, imperdiet vitae consectetur a, viverra in felis. Suspendisse elementum mattis faucibus. Aenean non egestas dolor, vel tincidunt nibh. Maecenas volutpat eget nisl sit amet ornare.'
+            },
+            {
+                title: 'Prieba de titulo4',
+                date: 'Publicado el dia ' + moment().date() + ' de ' + moment().format("MMMM") + ' del ' + moment().format("YYYY"),
+                content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris maximus blandit metus. Ut ante leo, tempor condimentum mollis ac, egestas non mauris. Aliquam erat volutpat. Duis fringilla tempus ligula id finibus. In cursus faucibus fringilla. Duis consectetur elit quis risus dignissim commodo. Nunc ut vestibulum quam. Proin turpis est, imperdiet vitae consectetur a, viverra in felis. Suspendisse elementum mattis faucibus. Aenean non egestas dolor, vel tincidunt nibh. Maecenas volutpat eget nisl sit amet ornare.'
 
-        },
-        {
-            title: 'Prieba de titulo5',
-            date: 'Publicado el dia ' + moment().date() + ' de ' + moment().format("MMMM") + ' del ' + moment().format("YYYY"),
-            content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris maximus blandit metus. Ut ante leo, tempor condimentum mollis ac, egestas non mauris. Aliquam erat volutpat. Duis fringilla tempus ligula id finibus. In cursus faucibus fringilla. Duis consectetur elit quis risus dignissim commodo. Nunc ut vestibulum quam. Proin turpis est, imperdiet vitae consectetur a, viverra in felis. Suspendisse elementum mattis faucibus. Aenean non egestas dolor, vel tincidunt nibh. Maecenas volutpat eget nisl sit amet ornare.'
+            },
+            {
+                title: 'Prieba de titulo5',
+                date: 'Publicado el dia ' + moment().date() + ' de ' + moment().format("MMMM") + ' del ' + moment().format("YYYY"),
+                content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris maximus blandit metus. Ut ante leo, tempor condimentum mollis ac, egestas non mauris. Aliquam erat volutpat. Duis fringilla tempus ligula id finibus. In cursus faucibus fringilla. Duis consectetur elit quis risus dignissim commodo. Nunc ut vestibulum quam. Proin turpis est, imperdiet vitae consectetur a, viverra in felis. Suspendisse elementum mattis faucibus. Aenean non egestas dolor, vel tincidunt nibh. Maecenas volutpat eget nisl sit amet ornare.'
 
-        }
+            }
 
-    ];
+        ];
 
-    posts.forEach((item, index) => {
-        var post = `
+
+        posts.forEach((item, index) => {
+            var post = `
         <article class="post">
                     <h2>${item.title}</h2>
                     <span class="date">${item.date}</span>
@@ -53,9 +57,11 @@ $(document).ready(function () {
                 </article>
         `;
 
-        $("#posts").append(post);
+            $("#posts").append(post);
 
-    });
+        });
+
+    }
 
     //Selector de tema
     var theme = $("#theme");
@@ -102,4 +108,16 @@ $(document).ready(function () {
         });
     }
 
+
+
+    if (window.location.href.indexOf('about') > -1) {
+        $('#acordeon').accordion();
+    }
+
+    if (window.location.href.indexOf('reloj') > -1) {
+        setInterval(function () {
+            var reloj = moment().format("hh:mm:ss");
+            $('#reloj').html(reloj);
+        }, 1000)
+    }
 });
